@@ -64,12 +64,13 @@ public class FrmLogin extends PageBase {
                 //menu.loadMenuOptions(usuario);
                 return "inicio?faces-redirect=true";
             }else{
-                this.addError("El usuario no existe o esta desactivado", "El usuario no existe o esta desactivado");
+               addError("El usuario no existe o esta desactivado", "El usuario no existe o esta desactivado");
             }
+    
             
         }catch(Exception ex){
             ex.printStackTrace();
-            this.addError("Favor Ingrese su contraseña","Favor Ingrese su contraseña");
+            this.addInfo("Favor Ingrese su contraseña","Favor Ingrese su contraseña");
         }
         return null;
     }
